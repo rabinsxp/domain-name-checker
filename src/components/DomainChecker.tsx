@@ -13,7 +13,7 @@ export default function DomainChecker() {
     const [result, setResult] = useState<ApiResponse | null>(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         setIsLoading(true);
 
